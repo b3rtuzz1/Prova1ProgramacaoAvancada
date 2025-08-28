@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<title>Formulário</title>
 <style>
 .nome {
   color: blue;
   font-family: Arial;
   font-weight: bold;
+  text-align: center;
 }
 .titulos1 {
   color: green;
@@ -19,28 +20,50 @@
   font-family: Arial;
   font-weight: bold;
 }
+
+input, select {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+form {
+  font-family: Arial;
+  width: 400px; /* largura fixa para alinhar certinho */
+  margin: 0 auto; /* centraliza na tela */
+}
 </style>
+<script>
+
+
+</script>
 
 <h2 class="nome">Formulário</h2>
-
 </head>
 <body>
 <form>
     
 <label class="titulos1" for="nome">Nome Completo:</label>
-<input class="conteudos" type="text" id="nome"><br><br>
+<input class="conteudos" type="text" id="nome"><br>
 <label class="titulos1" for="cpf">CPF:</label>
-<input class="conteudos" type="text" id="cpf"><br><br>
+<input class="conteudos" type="text" id="cpf"><br>
 <label class="titulos1" for="email">E-mail:</label>
-<input class="conteudos" type="email" id="email"><br><br>
+<input class="conteudos" type="email" id="email"><br>
 <label class="titulos1" for="senha">Senha:</label>
-<input class="conteudos" type="password" id="senha"><br><br>
+<input class="conteudos" type="password" id="senha"><br>
 <label class="titulos1" for="telefone">Telefone para contato:</label>
-<input class="conteudos" type="tel" id="telefone"><br><br>
+<input class="conteudos" type="tel" id="telefone"><br>
 <label class="titulos1" for="dataNascimento">Data de nascimento:</label>
-<input class="conteudos" type="date" id="dataNascimento"><br><br>
+<input class="conteudos" type="date" id="dataNascimento"><br>
 <label class="titulos1" for="dataIncricao">Data de incrição:</label>
-<input class="conteudos" type="date" id="dataIncricao"><br><br>
+<input class="conteudos" type="date" id="dataIncricao"><br>
+
+<label class="titulos2" for="instrumento">Instrumento musical:</label>
+<select id="instrumento" name="instrumento">
+  <option value="guitarra">Guitarra</option>
+  <option value="violao">Violão</option>
+  <option value="piano">Piano</option>
+  <option value="bateria">Bateria</option>
+</select><br>
 
 <label class="titulos2" for="profissional">Profissional?</label>
 <input type="radio" id="sim" name="profissional" value="sim">
@@ -62,8 +85,5 @@
 <input type="reset" value="Limpar">
 
 </form>
-
 </body>
-
-
 </html>
