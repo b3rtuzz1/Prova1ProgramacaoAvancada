@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Formulário</title>
 <style>
 .nome {
@@ -8,7 +9,9 @@
   font-family: Arial;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 0px;
 }
+
 .titulos1 {
   color: green;
   font-family: Arial;
@@ -21,69 +24,189 @@
   font-weight: bold;
 }
 
-input, select {
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
 form {
   font-family: Arial;
-  width: 400px; /* largura fixa para alinhar certinho */
-  margin: 0 auto; /* centraliza na tela */
+  margin: 0 auto;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+input[type="submit"], input[type="reset"] {
+  width: 80px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border: 1px solid black;
+  font-weight: bold;
+  margin-top: 0px;
 }
 </style>
-<script>
-
-
-</script>
-
-<h2 class="nome">Formulário</h2>
 </head>
 <body>
-<form>
-    
-<label class="titulos1" for="nome">Nome Completo:</label>
-<input class="conteudos" type="text" id="nome"><br>
-<label class="titulos1" for="cpf">CPF:</label>
-<input class="conteudos" type="text" id="cpf"><br>
-<label class="titulos1" for="email">E-mail:</label>
-<input class="conteudos" type="email" id="email"><br>
-<label class="titulos1" for="senha">Senha:</label>
-<input class="conteudos" type="password" id="senha"><br>
-<label class="titulos1" for="telefone">Telefone para contato:</label>
-<input class="conteudos" type="tel" id="telefone"><br>
-<label class="titulos1" for="dataNascimento">Data de nascimento:</label>
-<input class="conteudos" type="date" id="dataNascimento"><br>
-<label class="titulos1" for="dataIncricao">Data de incrição:</label>
-<input class="conteudos" type="date" id="dataIncricao"><br>
 
-<label class="titulos2" for="instrumento">Instrumento musical:</label>
-<select id="instrumento" name="instrumento">
-  <option value="guitarra">Guitarra</option>
-  <option value="violao">Violão</option>
-  <option value="piano">Piano</option>
-  <option value="bateria">Bateria</option>
-</select><br>
+<h2 class="nome">Formulário</h2>
 
-<label class="titulos2" for="profissional">Profissional?</label>
-<input type="radio" id="sim" name="profissional" value="sim">
-<label for="sim">Sim</label>
-<input type="radio" id="nao" name="profissional" value="nao">
-<label for="nao">Não</label><br>
-
-<label class="titulos2" for="estilos">Estilos:</label>
-<input type="checkbox" id="estilos1" name="estilos1" value="Rock & Roll">
-<label for="estilos1">Rock & Roll</label><br>
-<input type="checkbox" id="estilos2" name="estilos2" value="Pop">
-<label for="estilos2">Pop</label><br>
-<input type="checkbox" id="estilos3" name="estilos3" value="Bossa nova">
-<label for="estilos3">Bossa nova</label><br>
-<input type="checkbox" id="estilos4" name="estilos4" value="Samba">
-<label for="estilos4">Samba</label><br>
-
-<input type="submit" value="Enviar">
-<input type="reset" value="Limpar">
-
+<form id="meuFormulario" action="#" method="post">
+  <table>
+    <tr>
+      <td><label class="titulos1" for="nome">Nome completo:</label></td>
+      <td><input type="text" id="nome"></td>
+    </tr>
+    <tr>
+      <td><label class="titulos1" for="cpf">CPF:</label></td>
+      <td><input type="text" id="cpf"></td>
+    </tr>
+    <tr>
+      <td><label class="titulos1" for="email">E-mail:</label></td>
+      <td><input type="email" id="email"></td>
+    </tr>
+    <tr>
+      <td><label class="titulos1" for="senha">Senha:</label></td>
+      <td><input type="password" id="senha"></td>
+    </tr>
+    <tr>
+      <td><label class="titulos1" for="telefone">Telefone para contato:</label></td>
+      <td><input type="tel" id="telefone"></td>
+    </tr>
+    <tr>
+      <td><label class="titulos1" for="dataNascimento">Data de nascimento:</label></td>
+      <td><input type="date" id="dataNascimento"></td>
+    </tr>
+    <tr>
+      <td><label class="titulos1" for="dataInscricao">Data de inscrição:</label></td>
+      <td><input type="date" id="dataInscricao"></td>
+    </tr>
+    <tr>
+      <td><label class="titulos2" for="instrumento">Instrumento musical:</label></td>
+      <td>
+        <select id="instrumento">
+          <option value="guitarra">Guitarra</option>
+          <option value="violao">Violão</option>
+          <option value="piano">Piano</option>
+          <option value="bateria">Bateria</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label class="titulos2">Profissional?</label></td>
+      <td>
+        <input type="radio" id="sim" name="profissional" value="sim"><label for="sim"> Sim</label>
+        <input type="radio" id="nao" name="profissional" value="nao"><label for="nao"> Não</label>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: middle"><label class="titulos2">Estilos:</label></td>
+      <td>
+        <input type="checkbox" id="estilos1" value="Rock & Roll"><label for="estilos1"> Rock & Roll</label><br>
+        <input type="checkbox" id="estilos2" value="Pop"><label for="estilos2"> Pop</label><br>
+        <input type="checkbox" id="estilos3" value="Bossa Nova"><label for="estilos3"> Bossa Nova</label><br>
+        <input type="checkbox" id="estilos4" value="Samba"><label for="estilos4"> Samba</label><br><br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <input type="submit" value="Enviar">
+    </td>
+    <td>
+        <input type="reset" value="Limpar" onclick="limparFormulario()">
+      </td>
+    </tr>
+  </table>
 </form>
+
+<script>
+document.getElementById("meuFormulario").onsubmit = function(e) {
+  e.preventDefault();
+
+  let nome = document.getElementById("nome").value.trim();
+  let cpf = document.getElementById("cpf").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let senha = document.getElementById("senha").value;
+  let telefone = document.getElementById("telefone").value.trim();
+  let dataNasc = document.getElementById("dataNascimento").value;
+  let dataInscricao = document.getElementById("dataInscricao").value;
+  let instrumento = document.getElementById("instrumento").value;
+  let profissional = document.querySelector("input[name='profissional']:checked");
+
+  if (!nome || !cpf || !email || !senha || !telefone || !dataNasc || !dataInscricao || !instrumento || !profissional) {
+    alert("Preencha todos os campos!");
+    return false;
+  }
+
+  if (nome.split(" ").length < 2 || /\d/.test(nome)) {
+    alert("O nome completo deve ter pelo menos duas palavras e não pode conter números.");
+    return false;
+  }
+
+  if (!validarCPF(cpf)) {
+    alert("CPF inválido!");
+    return false;
+  }
+
+  if (!/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/.test(email)) {
+    alert("E-mail inválido! Deve conter apenas letras e o caractere @.");
+    return false;
+  }
+
+  if (senha.length < 12 || !/[0-9]/.test(senha) || !/[A-Z]/.test(senha)) {
+    alert("A senha deve ter pelo menos 12 caracteres, incluindo um número e uma letra maiúscula.");
+    return false;
+  }
+
+  if (!/^\d{1,15}$/.test(telefone)) {
+    alert("O telefone deve conter apenas dígitos numéricos (máx. 15).");
+    return false;
+  }
+
+  let nasc = new Date(dataNasc);
+  if (nasc < new Date("1980-01-01") || nasc > new Date("2005-12-31")) {
+    alert("Data de nascimento deve estar entre 01/01/1980 e 31/12/2005.");
+    return false;
+  }
+
+  let insc = new Date(dataInscricao);
+  let hoje = new Date();
+  if (insc.getFullYear() !== 2025 || insc >= hoje) {
+    alert("Data de inscrição deve estar em 2025 e ser anterior à data atual.");
+    return false;
+  }
+
+  alert("Formulário enviado com sucesso!");
+  document.getElementById("meuFormulario").reset();
+  return true;
+};
+
+function validarCPF(cpf) {
+  cpf = cpf.replace(/[^\d]+/g,'');
+  if(cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+  let soma, resto;
+
+  soma = 0;
+  for (let i=1; i<=9; i++) soma += parseInt(cpf.substring(i-1, i)) * (11 - i);
+  resto = (soma * 10) % 11;
+  if ((resto === 10) || (resto === 11)) resto = 0;
+  if (resto !== parseInt(cpf.substring(9, 10))) return false;
+
+  soma = 0;
+  for (let i = 1; i <= 10; i++) soma += parseInt(cpf.substring(i-1, i)) * (12 - i);
+  resto = (soma * 10) % 11;
+  if ((resto === 10) || (resto === 11)) resto = 0;
+  if (resto !== parseInt(cpf.substring(10, 11))) return false;
+
+  return true;
+}
+
+function limparFormulario() {
+  document.getElementById("meuFormulario").reset();
+  alert("Formulário limpo!");
+}
+</script>
+
 </body>
 </html>
